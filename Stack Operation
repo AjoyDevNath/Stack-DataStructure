@@ -1,0 +1,108 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class stack
+{
+private:
+    int top;
+    int arr[5];
+
+public:
+    stack()
+    {
+        top = -1;
+        for(int i=0; i<5; i++)
+        {
+            cin>>arr[i] = 0;
+        }
+    }
+
+    bool is_empty()
+    {
+        if(top == -1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    bool is_full()
+    {
+        if(top == 4)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    void push(int x)
+    {
+        is(is_full())
+        {
+            cout<<"Stack is full"<<endl;
+        }
+        else
+        {
+            top++;
+            arr[top] = x;
+        }
+    }
+
+    int pop()
+    {
+        if(is_empty())
+        {
+            cout<<"Stack is already empty"<<endl;
+            return 0;
+        }
+        else
+        {
+            int popValue = arr[top];
+            arr[top] = 0;
+            top--;
+
+            return popValue;
+        }
+    }
+    int countValue()
+    {
+        return ( top + 1 );
+    }
+
+    int peek(int position)
+    {
+        if(is_empty())
+        {
+            cout<<"stack underflow"<<endl;
+        }
+        else
+        {
+            return arr[position];
+        }
+    }
+
+    void change(int index,int newValue)
+    {
+        arr[index] = newValue;
+    }
+
+    void display()
+    {
+        for(int i = 4; i >= 0 ; i--)
+        {
+            cout<<arr[i]<<" ";
+        }
+        cout<<endl;
+    }
+};
+
+int main()
+{
+    stack s1;
+}
